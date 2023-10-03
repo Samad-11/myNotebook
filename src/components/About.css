@@ -1,0 +1,96 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color for the entire page */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Style the header section */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 4px solid #ff6600;
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+/* Style the main content */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2,
+.praise-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.praise-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 20px;
+    color: #555;
+}
+
+.praise-section li {
+    margin-bottom: 10px;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+    
+    main {
+        padding: 15px;
+    }
+}

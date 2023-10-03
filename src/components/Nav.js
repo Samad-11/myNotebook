@@ -8,7 +8,7 @@ const Nav = () => {
     navigate("/login");
   };
   return (
-    <nav className="row navbar navbar-expand-lg navbar-secondary bg-secondary fixed-top ">
+    <nav className="row navbar navbar-expand-lg navbar-secondary bg-secondary fixed-top " >
       <div className="container-fluid ">
         <Link className="navbar-brand" to="/">
           myNoteBook

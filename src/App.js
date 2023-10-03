@@ -13,18 +13,18 @@ function App() {
     <>
       <NoteState>
         <div className="container-fluid">
-
-        <Nav />
+          <Nav />
         </div>
         <div className="container">
-
-        <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/about" Component={About} />
-          <Route path="/login" Component={Login} />
-          <Route path="/signup" Component={Signup} />
-          <Route path="/*" Component={Error} />
-        </Routes>
+          <div className="row my-5">
+            <Routes>
+              <Route path="/" Component={Home} />
+              <Route path="/about" Component={About} />
+              <Route path="/login" Component={Login} />
+              <Route path="/signup" Component={Signup} />
+              <Route path="/*" Component={Error} />
+            </Routes>
+          </div>
         </div>
       </NoteState>
     </>
