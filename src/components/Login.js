@@ -25,6 +25,7 @@ const Login = () => {
     // console.log(json);
     if (json.success) {
         localStorage.setItem('token',json.userToken);
+        localStorage.setItem('user',json.user);
         navigate('/')
         
     }else{

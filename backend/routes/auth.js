@@ -90,7 +90,7 @@ router.post(
       };
       const userToken = jwt.sign(data, secret);
       success = true;
-      res.json({ success, userToken });
+      res.json({ success, userToken,user:User.name });
     } catch (error) {
       return res
         .status(500)

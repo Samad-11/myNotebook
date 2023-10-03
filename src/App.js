@@ -12,7 +12,12 @@ function App() {
   return (
     <>
       <NoteState>
+        <div className="container-fluid">
+
         <Nav />
+        </div>
+        <div className="container">
+
         <Routes>
           <Route path="/" Component={Home} />
           <Route path="/about" Component={About} />
@@ -20,6 +25,7 @@ function App() {
           <Route path="/signup" Component={Signup} />
           <Route path="/*" Component={Error} />
         </Routes>
+        </div>
       </NoteState>
     </>
   );

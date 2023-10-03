@@ -4,38 +4,16 @@ const Nav = () => {
   const navigate = useNavigate();
   let location = useLocation();
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    localStorage.clear();
     navigate("/login");
   };
-  let username = "sam";
-  let user = '';
-  async function getuser() {
-    const response = await fetch("http://localhost:5000/api/auth/getUser", {
-      method: "post",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-        authToken: localStorage.getItem("token"),
-      },
-    });
-    const json = await response.json();
-    console.log(json);
-    console.log(typeof json.User.name);
-    user = json.User.name;
-  }
-  if (localStorage.getItem("token")) {
-    // console.log("called");
-    getuser();
-  } else {
-    console.log('token null');
-  }
   return (
-    <nav className="row navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
+    <nav className="row navbar navbar-expand-lg navbar-secondary bg-secondary fixed-top ">
+      <div className="container-fluid ">
         <Link className="navbar-brand" to="/">
           myNoteBook
         </Link>
-        
+
         <button
           className="navbar-toggler"
           type="button"
@@ -69,7 +47,14 @@ const Nav = () => {
               </Link>
             </li>
           </ul>
-          <h5>{user}</h5>
+          {localStorage.getItem("user") ? (
+            <div className="text-white text-center mx-5">
+              <big className="text-warning  fs-3">Hey, </big>
+              {localStorage.getItem("user")}
+            </div>
+          ) : (
+            " "
+          )}
           {!localStorage.getItem("token") ? (
             <div className="d-flex">
               <Link

@@ -10,6 +10,7 @@ const Form = () => {
     e.preventDefault();
     // console.log(note);
     addNote(note.title, note.description, note.tags);
+    setNote({ ...note, title: "", description: "", tags: "" });
     refAddClose.current.click();
     // console.log("clicked");
   };
@@ -21,7 +22,7 @@ const Form = () => {
     <>
       <button
         type="button"
-        className="btn btn-primary w-50 m-auto"
+        className="btn btn-primary w-50 m-auto mt-5"
         data-bs-toggle="modal"
         data-bs-target="#formModal"
       >
@@ -61,6 +62,7 @@ const Form = () => {
                     className="form-control"
                     id="noteTitle"
                     name="title"
+                    value={note.title}
                     onChange={onChange}
                   />
                   <div id="emailHelp" className="form-text">
@@ -76,6 +78,8 @@ const Form = () => {
                     className="form-control"
                     id="noteDescription"
                     name="description"
+                    value={note.description}
+
                     onChange={onChange}
                   />
                 </div>
@@ -88,6 +92,7 @@ const Form = () => {
                     className="form-control"
                     id="noteTag"
                     name="tags"
+                    value={note.tags}
                     onChange={onChange}
                   />
                 </div>
@@ -105,6 +110,7 @@ const Form = () => {
               <button
                 type="submit"
                 className="btn btn-primary"
+                
                 onClick={handleClick}
               >
                 Add Note
